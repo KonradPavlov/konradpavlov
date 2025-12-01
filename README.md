@@ -189,7 +189,7 @@ An interactive health surveillance tool for disease monitoring, featuring real-t
     <td align="center" width="25%">
       <img src="https://img.icons8.com/fluency/48/000000/linkedin.png" width="40"/><br>
       <b>LinkedIn</b><br>
-      <a href="https://https://www.linkedin.com/in/konradpavlov-epidemiologist/">@konradpavlov</a>
+      <a href="https://https://https://www.linkedin.com/in/konradpavlov-epidemiologist/">@konradpavlov</a>
     </td>
     <td align="center" width="25%">
       <img src="https://img.icons8.com/fluency/48/000000/marker.png" width="40"/><br>
