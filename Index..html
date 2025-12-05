@@ -1,141 +1,546 @@
-<div class="section">
-        <h2>👨‍💻 About Me</h2>
-        <p style="font-size: 1.1em; line-height: 1.8;">
-            I'm an epidemiologist from Benin with strong expertise in <strong>R programming</strong>, <strong>statistical analysis</strong>, and <strong>public health surveillance</strong>. I specialize in transforming complex health data into actionable insights through interactive dashboards and rigorous statistical analysis.
-        </p>
-        <p style="font-size: 1.1em; line-height: 1.8; margin-top: 15px;">
-            🎓 <strong>Education:</strong> Professional License in Epidemiology - ENATSE (National School of Public Health & Epidemiological Surveillance)<br>
-            🔬 <strong>Experience:</strong> Epidemiological surveillance, data quality audits, disease monitoring systems
-        </p>
-    </div>
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raider | Konrad Pavlov - Data Scientist</title>
+    <meta name="description" content="Portfolio de Konrad Pavlov, Épidémiologiste & Data Scientist expert en R et Santé Publique.">
+    
+    <!-- Tailwind CSS (Via CDN pour la simplicité) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuration Tailwind personnalisée -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                200: '#c7d2fe',
+                300: '#a5b4fc',
+                400: '#818cf8',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+                800: '#3730a3',
+                900: '#312e81',
+              },
+              secondary: {
+                50: '#ecfeff',
+                100: '#cffafe',
+                200: '#a5f3fc',
+                300: '#67e8f9',
+                400: '#22d3ee',
+                500: '#06b6d4',
+                600: '#0891b2',
+                900: '#164e63',
+              }
+            }
+          }
+        }
+      }
+    </script>
 
-    <div class="section">
-        <h2>🛠️ Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Programming & Analysis</h3>
-                <ul>
-                    <li>R (Advanced)</li>
-                    <li>tidyverse, dplyr, tidyr</li>
-                    <li>ggplot2, plotly</li>
-                    <li>gtsummary, compareGroups</li>
-                    <li>Statistical modeling</li>
-                </ul>
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icônes Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Scrollbar personnalisée */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        /* Animations utilitaires */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-primary-500 selection:text-white">
+
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6 bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            
+            <!-- Logo Raider -->
+            <a href="#home" class="flex items-center gap-2 group">
+                <div class="bg-gradient-to-br from-primary-600 to-primary-800 text-white p-2 rounded-lg shadow-lg group-hover:shadow-primary-500/30 transition-all duration-300">
+                    <i data-lucide="activity" class="w-6 h-6"></i>
+                </div>
+                <span class="font-heading font-bold text-2xl tracking-tight text-slate-900 group-hover:text-primary-700 transition-colors">
+                    Raider
+                </span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="nav-link text-sm font-medium text-slate-500 hover:text-primary-600 transition-colors">Accueil</a>
+                <a href="#about" class="nav-link text-sm font-medium text-slate-500 hover:text-primary-600 transition-colors">À Propos</a>
+                <a href="#skills" class="nav-link text-sm font-medium text-slate-500 hover:text-primary-600 transition-colors">Compétences</a>
+                <a href="#services" class="nav-link text-sm font-medium text-slate-500 hover:text-primary-600 transition-colors">Services</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-primary-600 transition-colors shadow-lg shadow-slate-900/20 hover:shadow-primary-600/30">
+                    Me recruter
+                </a>
             </div>
-            <div class="skill-category">
-                <h3>Data Management</h3>
-                <ul>
-                    <li>MICE (Missing data)</li>
-                    <li>dlookr, VIM, naniar</li>
-                    <li>Data cleaning & validation</li>
-                    <li>Survey data (KoBo, ODK)</li>
-                    <li>Excel advanced</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Visualization & Reporting</h3>
-                <ul>
-                    <li>R Shiny dashboards</li>
-                    <li>R Markdown reports</li>
-                    <li>QGIS mapping</li>
-                    <li>PowerPoint presentations</li>
-                    <li>Scientific writing</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Domain Expertise</h3>
-                <ul>
-                    <li>Biostatistics</li>
-                    <li>Epidemiology</li>
-                    <li>Public health surveillance</li>
-                    <li>Clinical data analysis</li>
-                    <li>Health systems research</li>
-                </ul>
-            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-primary-600 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
         </div>
-    </div>
 
-    <div class="section">
-        <h2>🚀 Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>🔍 Missing Data Management App</h3>
-                <p>Advanced R Shiny application for comprehensive missing data analysis using MICE, dlookr, and multiple visualization techniques. Perfect for research data preparation.</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">R Shiny</span>
-                    <span class="tech-tag">MICE</span>
-                    <span class="tech-tag">dlookr</span>
-                    <span class="tech-tag">VIM</span>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-xl py-4 px-6 flex flex-col gap-4">
+            <a href="#home" class="mobile-link text-base font-medium text-slate-600 hover:text-primary-600 py-2 border-b border-slate-50">Accueil</a>
+            <a href="#about" class="mobile-link text-base font-medium text-slate-600 hover:text-primary-600 py-2 border-b border-slate-50">À Propos</a>
+            <a href="#skills" class="mobile-link text-base font-medium text-slate-600 hover:text-primary-600 py-2 border-b border-slate-50">Compétences</a>
+            <a href="#services" class="mobile-link text-base font-medium text-slate-600 hover:text-primary-600 py-2 border-b border-slate-50">Services</a>
+            <a href="#contact" class="mobile-link mt-2 w-full text-center py-3 rounded-xl bg-primary-600 text-white font-semibold">Démarrer un projet</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (MASSIVE TYPOGRAPHY) -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-52 lg:pb-40 overflow-hidden flex flex-col justify-center min-h-[85vh]">
+        
+        <!-- Background Decor -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary-200/20 rounded-full blur-[100px] -z-10 opacity-60"></div>
+        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary-200/10 rounded-full blur-[80px] -z-10"></div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center z-10 fade-in-up">
+            
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 shadow-sm mb-10 hover:scale-105 transition-transform cursor-default">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span class="text-xs md:text-sm font-bold uppercase tracking-widest text-slate-600">
+                    Disponible pour missions & projets
+                </span>
+            </div>
+
+            <!-- Grand Titre -->
+            <h1 class="font-heading font-extrabold text-5xl sm:text-7xl lg:text-8xl text-slate-900 leading-[1.05] tracking-tight mb-8">
+                Bienvenue à <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-primary-500 to-secondary-500">
+                    Raider Analytics
+                </span>
+            </h1>
+
+            <!-- Sous-titre -->
+            <p className="text-xl sm:text-2xl md:text-3xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-12 font-light">
+                Je suis <strong class="font-semibold text-slate-900">Konrad Pavlov</strong>, Épidémiologiste & Data Scientist. 
+                <br class="hidden md:block" />
+                Je transforme la complexité en clarté stratégique grâce à R & Shiny.
+            </p>
+
+            <!-- Boutons CTA -->
+            <div class="flex flex-col sm:flex-row gap-5 justify-center items-center mt-12">
+                <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-slate-900 text-white text-lg font-semibold hover:bg-primary-600 hover:shadow-2xl hover:shadow-primary-600/20 transition-all duration-300 transform hover:-translate-y-1">
+                    Démarrer un projet <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-white text-slate-700 border border-slate-200 text-lg font-semibold hover:border-primary-200 hover:text-primary-600 hover:bg-slate-50 transition-all duration-300">
+                    Découvrir mes services <i data-lucide="mouse-pointer-2" class="w-5 h-5"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary-600 font-bold tracking-wider uppercase text-sm">Mon Parcours</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mt-3 mb-6">
+                    À propos de moi
+                </h2>
+                <div class="text-slate-600 text-lg leading-relaxed space-y-4">
+                    <p>
+                        Épidémiologiste et data scientist spécialisé dans l’analyse, la gestion et l’interprétation des données de santé.
+                    </p>
+                    <p>
+                        Je maîtrise le nettoyage de bases complexes, l’analyse descriptive et bivariée, la visualisation avancée ainsi que l’automatisation de rapports avec R Markdown et Shiny.
+                    </p>
+                    <p>
+                        Mon but : Vous aider à convertir des données brutes en informations exploitables pour orienter efficacement la prise de décision, optimiser les stratégies sanitaires et renforcer les systèmes de santé publique.
+                    </p>
                 </div>
             </div>
-            <div class="project-card">
-                <h3>📊 Statistical Analysis Portfolio</h3>
-                <p>Complete statistical analysis workflow with publication-ready tables, bivariate analysis, and automated reporting for research papers and theses.</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">gtsummary</span>
-                    <span class="tech-tag">compareGroups</span>
-                    <span class="tech-tag">ggplot2</span>
-                    <span class="tech-tag">R Markdown</span>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Education Card -->
+                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-primary-100 hover:shadow-xl hover:shadow-primary-900/5 transition-all duration-300">
+                    <div class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Formation Académique</h3>
+                    <p class="text-slate-500 text-sm mb-4">ENATSE (École Nationale de Santé Publique)</p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-primary-500 mt-2 flex-shrink-0"></div>
+                            <p class="text-slate-700">Licence Professionnelle en Épidémiologie</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-primary-500 mt-2 flex-shrink-0"></div>
+                            <p class="text-slate-700">Expertise en surveillance épidémiologique</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <h3>🏥 Epidemiological Dashboard</h3>
-                <p>Interactive health surveillance dashboard for disease monitoring and facility data visualization with real-time updates and geographic mapping.</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">R Shiny</span>
-                    <span class="tech-tag">leaflet</span>
-                    <span class="tech-tag">plotly</span>
-                    <span class="tech-tag">tidyverse</span>
+
+                <!-- Experience Card -->
+                <div class="group bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-secondary-100 hover:shadow-xl hover:shadow-secondary-900/5 transition-all duration-300">
+                    <div class="w-12 h-12 bg-secondary-100 text-secondary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Expérience Terrain</h3>
+                    <p class="text-slate-500 text-sm mb-4">Missions & Projets</p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-secondary-500 mt-2 flex-shrink-0"></div>
+                            <p class="text-slate-700">Audits de qualité des données de surveillance</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-secondary-500 mt-2 flex-shrink-0"></div>
+                            <p class="text-slate-700">Mise en place de systèmes de surveillance</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-secondary-500 mt-2 flex-shrink-0"></div>
+                            <p class="text-slate-700">Analyses statistiques pour ONG et chercheurs</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>💼 Services I Offer</h2>
-        <div class="services-list">
-            <div class="service-item">
-                <h3>📚 Statistical Analysis</h3>
-                <p>Complete statistical analysis for thesis, dissertations, and research papers. Includes data cleaning, descriptive & bivariate analysis, publication-ready tables.</p>
-                <p class="price">$80 - $200</p>
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary-600 font-bold tracking-wider uppercase text-sm">Stack Technique</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mt-3">
+                    Mes outils de prédilection
+                </h2>
             </div>
-            <div class="service-item">
-                <h3>🧹 Data Cleaning</h3>
-                <p>Professional data preparation, missing data handling, outlier detection, and validation with documented R scripts.</p>
-                <p class="price">$40 - $100</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500 flex items-center justify-center shadow-lg shadow-blue-500/20 mb-6 text-white">
+                        <i data-lucide="code-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-6">Programmation & Analyse</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-blue-200"></div>R Programming (Avancé)</li>
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-blue-200"></div>Tidyverse (dplyr, tidyr)</li>
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-blue-200"></div>Modélisation statistique</li>
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-blue-200"></div>Tests d'hypothèses</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 mb-6 text-white">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-6">Gestion de Données</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-emerald-200"></div>Nettoyage avancé (MICE, VIM)</li>
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-emerald-200"></div>Collecte mobile (ODK, Kobo)</li>
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-emerald-200"></div>Audit de qualité (dlookr)</li>
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-emerald-200"></div>SQL Basics</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500 flex items-center justify-center shadow-lg shadow-purple-500/20 mb-6 text-white">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-6">Visualisation & Web</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-purple-200"></div>R Shiny Apps</li>
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-purple-200"></div>Tableaux de bord interactifs</li>
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-purple-200"></div>ggplot2 & Plotly</li>
+                        <li class="flex items-center gap-3 text-slate-600"><div class="w-2 h-2 rounded-full bg-purple-200"></div>R Markdown Reports</li>
+                    </ul>
+                </div>
             </div>
-            <div class="service-item">
-                <h3>📈 R Shiny Dashboards</h3>
-                <p>Interactive dashboards for health monitoring, business analytics, or survey data visualization. User-friendly and customizable.</p>
-                <p class="price">$150 - $500</p>
-            </div>
-            <div class="service-item">
-                <h3>📄 Automated Reports</h3>
-                <p>R Markdown automated reporting systems for recurring analysis, weekly bulletins, or monitoring reports.</p>
-                <p class="price">$80 - $250</p>
-            </div>
-            <div class="service-item">
-                <h3>🎓 R Training</h3>
-                <p>Personalized R programming training for data analysis, visualization, or Shiny dashboard development.</p>
-                <p class="price">$25 - $40/hour</p>
-            </div>
-            <div class="service-item">
-                <h3>🔬 Epidemiological Analysis</h3>
-                <p>Specialized analysis for public health research, disease surveillance, or clinical trials with epidemiological measures.</p>
-                <p class="price">$100 - $300</p>
+
+            <!-- Tech Badge Cloud -->
+            <div class="mt-16 pt-10 border-t border-slate-200">
+                <p class="text-center text-slate-400 text-sm mb-6 uppercase tracking-widest font-semibold">Technologies maîtrisées</p>
+                <div class="flex flex-wrap justify-center gap-4 opacity-70">
+                    <span class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-white hover:shadow-md transition-all cursor-default">RStudio</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-white hover:shadow-md transition-all cursor-default">Shiny</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-white hover:shadow-md transition-all cursor-default">Stata</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-white hover:shadow-md transition-all cursor-default">SPSS</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-white hover:shadow-md transition-all cursor-default">Excel</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-white hover:shadow-md transition-all cursor-default">ODK Build</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-white hover:shadow-md transition-all cursor-default">KoboToolbox</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-white hover:shadow-md transition-all cursor-default">Git</span>
+                    <span class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium hover:bg-white hover:shadow-md transition-all cursor-default">LaTeX</span>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="cta-section">
-        <h2 style="color: white; border: none; padding: 0;">Ready to Work Together?</h2>
-        <p style="font-size: 1.2em; margin-top: 15px;">Let's transform your data into actionable insights!</p>
-        <p style="margin-top: 10px;">Available Monday - Saturday, 8 AM - 6 PM GMT</p>
-        <a href="mailto:pavlovkonrad@gmail.com" class="cta-button">Get In Touch</a>
-    </div>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary-600 font-bold tracking-wider uppercase text-sm">Services</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mt-3 mb-6">
+                    Solutions sur mesure
+                </h2>
+                <p class="text-slate-600 text-lg">
+                    Des services adaptés aux chercheurs, doctorants, ONG et entreprises cherchant à valoriser leurs données.
+                </p>
+            </div>
 
-    <footer>
-        <p>© 2025 Konrad Pavlov - Epidemiologist & Data Scientist</p>
-        <p style="margin-top: 10px;">📍 Bohicon, Benin | 🌍 Available for remote work worldwide</p>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Service 1 -->
+                <div class="relative bg-white rounded-3xl p-8 border border-slate-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-6">
+                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-2">Analyse Statistique</h3>
+                    <p class="text-sm text-slate-500 mb-6">Traitement complet pour thèses et articles. Nettoyage, analyses descriptives, bivariées et tests.</p>
+                    <div class="text-3xl font-bold mb-8 font-heading text-slate-900">$80 - $200</div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-sm"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary-600"></i><span class="text-slate-600">Nettoyage de base</span></li>
+                        <li class="flex items-start gap-3 text-sm"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary-600"></i><span class="text-slate-600">Statistiques descriptives</span></li>
+                        <li class="flex items-start gap-3 text-sm"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary-600"></i><span class="text-slate-600">Tests d'hypothèses</span></li>
+                    </ul>
+                    <a href="#contact" class="w-full py-3 rounded-xl font-semibold text-center bg-slate-100 hover:bg-slate-200 text-slate-900 transition-colors">Commander</a>
+                </div>
+
+                <!-- Service 2 (Highlighted) -->
+                <div class="relative bg-slate-900 text-white rounded-3xl p-8 border border-slate-900 shadow-2xl transform md:scale-105 z-10 flex flex-col">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-lg">
+                        Populaire
+                    </span>
+                    <div class="w-12 h-12 rounded-xl bg-white/10 text-white flex items-center justify-center mb-6">
+                        <i data-lucide="monitor-play" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-2">Dashboards R Shiny</h3>
+                    <p class="text-sm text-slate-300 mb-6">Développement d'interfaces web interactives pour le monitoring de santé ou l'analyse business.</p>
+                    <div class="text-3xl font-bold mb-8 font-heading text-white">$150 - $500</div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-sm"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary-400"></i><span class="text-slate-200">Design UI/UX sur mesure</span></li>
+                        <li class="flex items-start gap-3 text-sm"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary-400"></i><span class="text-slate-200">Hébergement cloud</span></li>
+                        <li class="flex items-start gap-3 text-sm"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary-400"></i><span class="text-slate-200">Mise à jour temps réel</span></li>
+                    </ul>
+                    <a href="#contact" class="w-full py-3 rounded-xl font-semibold text-center bg-primary-600 hover:bg-primary-700 text-white transition-colors">Commander</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="relative bg-white rounded-3xl p-8 border border-slate-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-2">Formation & Coaching</h3>
+                    <p class="text-sm text-slate-500 mb-6">Apprenez à maîtriser R, de l'installation à la création de graphiques complexes.</p>
+                    <div class="text-3xl font-bold mb-8 font-heading text-slate-900">$25 - $40 /h</div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-sm"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary-600"></i><span class="text-slate-600">Cours particuliers</span></li>
+                        <li class="flex items-start gap-3 text-sm"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary-600"></i><span class="text-slate-600">Support de cours PDF</span></li>
+                        <li class="flex items-start gap-3 text-sm"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary-600"></i><span class="text-slate-600">Exercices pratiques</span></li>
+                    </ul>
+                    <a href="#contact" class="w-full py-3 rounded-xl font-semibold text-center bg-slate-100 hover:bg-slate-200 text-slate-900 transition-colors">Commander</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-slate-50 relative overflow-hidden">
+        <!-- Decorative blobs -->
+        <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary-200/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-secondary-200/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <div>
+                    <span class="text-primary-600 font-bold tracking-wider uppercase text-sm">Me contacter</span>
+                    <h2 class="font-heading font-bold text-4xl md:text-5xl text-slate-900 mt-3 mb-6 leading-tight">
+                        Prêt à valoriser vos données ?
+                    </h2>
+                    <p class="text-slate-600 text-lg mb-8">
+                        Je suis disponible pour discuter de vos projets d'analyse, de tableaux de bord ou de formation. 
+                        Choisissez le canal qui vous convient le mieux.
+                    </p>
+                    
+                    <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 inline-block">
+                        <p class="text-sm text-slate-500 mb-1">Email secondaire :</p>
+                        <a href="mailto:pavlovkonrad@gmail.com" class="font-semibold text-slate-900 hover:text-primary-600 transition-colors flex items-center gap-2">
+                            pavlovkonrad@gmail.com <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 flex items-center gap-4">
+                        <a href="https://www.facebook.com/spirou.messah" target="_blank" rel="noreferrer" class="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium flex items-center gap-2">
+                            <i data-lucide="facebook" class="w-4 h-4"></i> Profil Perso
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/2290159659757" target="_blank" class="group p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-primary-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-40">
+                        <div class="flex justify-between items-start">
+                            <div class="w-10 h-10 rounded-lg bg-green-500 text-white flex items-center justify-center shadow-md">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-300 group-hover:text-primary-600 transition-colors"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs font-medium uppercase tracking-wide mb-1">WhatsApp</p>
+                            <p class="font-heading font-bold text-slate-900 group-hover:text-primary-600 transition-colors">Réponse rapide</p>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:sallankonrad@gmail.com" class="group p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-primary-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-40">
+                        <div class="flex justify-between items-start">
+                            <div class="w-10 h-10 rounded-lg bg-red-500 text-white flex items-center justify-center shadow-md">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-300 group-hover:text-primary-600 transition-colors"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs font-medium uppercase tracking-wide mb-1">Email Principal</p>
+                            <p class="font-heading font-bold text-slate-900 group-hover:text-primary-600 transition-colors">Projets pros</p>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com" target="_blank" class="group p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-primary-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-40">
+                        <div class="flex justify-between items-start">
+                            <div class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-md">
+                                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-300 group-hover:text-primary-600 transition-colors"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs font-medium uppercase tracking-wide mb-1">LinkedIn</p>
+                            <p class="font-heading font-bold text-slate-900 group-hover:text-primary-600 transition-colors">Réseau pro</p>
+                        </div>
+                    </a>
+
+                    <!-- Facebook Page -->
+                    <a href="https://www.facebook.com/profile.php?id=100089048440156" target="_blank" class="group p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-primary-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-40">
+                        <div class="flex justify-between items-start">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500 text-white flex items-center justify-center shadow-md">
+                                <i data-lucide="facebook" class="w-6 h-6"></i>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-300 group-hover:text-primary-600 transition-colors"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs font-medium uppercase tracking-wide mb-1">Facebook Pro</p>
+                            <p class="font-heading font-bold text-slate-900 group-hover:text-primary-600 transition-colors">Actus Data Science</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            
+            <div class="text-center md:text-left">
+                <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+                    <i data-lucide="activity" class="text-primary-500 w-5 h-5"></i>
+                    <span class="font-heading font-bold text-xl text-white">Raider</span>
+                </div>
+                <p class="text-sm text-slate-500">
+                    Epidemiologist & R Data Scientist • Bénin
+                </p>
+            </div>
+
+            <div class="flex gap-6">
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 hover:text-white transition-all duration-300">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="mailto:sallankonrad@gmail.com" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-600 flex items-center justify-center gap-1">
+            © 2025 Konrad Pavlov. Fait avec <i data-lucide="heart" class="w-3 h-3 text-red-500 fill-red-500"></i> et HTML5.
+        </div>
     </footer>
-</div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Initialiser les icônes
+        lucide.createIcons();
+
+        // Menu Mobile Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        if(btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Fermer le menu au clic sur un lien
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                navbar.classList.remove('py-6', 'bg-transparent');
+            } else {
+                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                navbar.classList.add('py-6', 'bg-transparent');
+            }
+        });
+    </script>
+</body>
+</html>
